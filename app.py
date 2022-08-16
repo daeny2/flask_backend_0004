@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from models import todo  # call model file
 from flask_cors import CORS  # to avoid cors error in different frontend like react js or any other
 
-app = Flask(__name__)
+app = Flask(__name__) 
 CORS(app)
 
 todo = todo.Todo()
