@@ -1,0 +1,8 @@
+{
+    "db": {
+            "url" : "mongodb://146.56.161.53:27017/",
+            "name" :"database_name",
+            "user" :"mongo",
+            "password" :"mongo"
+    }
+}
