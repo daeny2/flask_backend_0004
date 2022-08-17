@@ -1,7 +1,7 @@
 {
     "db": {
             "url" : "mongodb://localhost:27017/",
-            "addr" : "146.56.161.53",
+            "addr" : "localhost",
             "port" : "27017",
             "name" : "Clouflake",
             "user" : "****",

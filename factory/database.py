@@ -7,7 +7,12 @@ from config import config
 
 class Database(object):
     def __init__(self):
-        uri = "mongodb://%s:%s@%s:%s" % ( config['db']['user'], config['db']['password'], config['db']['addr'], config['db']['port'])
+        if(not config['db']['url']):
+            uri = "mongodb://%s:%s@%s:%s" % ( config['db']['user'], config['db']['password'], config['db']['addr'], config['db']['port'])
+        else:
+            uri = config['db']['url']
+
+        print(uri)
         self.client = MongoClient(uri)  # configure db url
         self.db = self.client[config['db']['name']]  # configure db name
 
