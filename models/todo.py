@@ -1,5 +1,6 @@
 from factory.validation import Validator
 from factory.database import Database
+from config import config
 
 
 class Todo(object):
@@ -7,7 +8,7 @@ class Todo(object):
         self.validator = Validator()
         self.db = Database()
 
-        self.collection_name = 'Todo'  # collection name
+        self.collection_name = config['db']['collection']  # collection name
 
         self.fields = {
             "title": "string",
